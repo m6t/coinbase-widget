@@ -34,6 +34,7 @@ namespace BTCPrice
             this.openheight = this.Height;
             this.Topmost = true;
             this.Height = closeheight;
+            this.ShowInTaskbar = false;
             Tmr_Tick(null, null);
         }
         TimeSpan animduration = TimeSpan.FromSeconds(0.5);
@@ -47,9 +48,9 @@ namespace BTCPrice
         double lastBtc = 0;
         double lastEth = 0;
         double lastLtc = 0;
-        SolidColorBrush durgun = new SolidColorBrush(Color.FromArgb(255, 110, 110, 110));
-        SolidColorBrush yukselis = new SolidColorBrush(Color.FromArgb(255, 25, 141, 0));
-        SolidColorBrush dusus = new SolidColorBrush(Color.FromArgb(255, 232, 53, 0));
+        SolidColorBrush stable = new SolidColorBrush(Color.FromArgb(255, 110, 110, 110));
+        SolidColorBrush rising = new SolidColorBrush(Color.FromArgb(255, 25, 141, 0));
+        SolidColorBrush falling = new SolidColorBrush(Color.FromArgb(255, 232, 53, 0));
 
         private void Tmr_Tick(object sender, EventArgs e)
         {
@@ -89,19 +90,19 @@ namespace BTCPrice
 
             if (lastBtc == currentBtc)
             {
-                btc.Foreground = durgun;
+                btc.Foreground = stable;
                 //BackgroundAnim(btc,durgun);
             }
             else if (lastBtc < currentBtc)
             {
-                btc.Foreground = yukselis;
-                BackgroundAnim(btc, yukselis);
+                btc.Foreground = rising;
+                BackgroundAnim(btc, rising);
 
             }
             else
             {
-                btc.Foreground = dusus;
-                BackgroundAnim(btc, dusus);
+                btc.Foreground = falling;
+                BackgroundAnim(btc, falling);
 
             }
 

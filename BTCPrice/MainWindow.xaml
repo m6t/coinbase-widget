@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:BTCPrice"
         xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="BTCPrice.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="90" Width="439" WindowStyle="None" ResizeMode="NoResize">
+        Title="BTCPrice" Height="90" Width="439" WindowStyle="None" ResizeMode="NoResize" Icon="online.ico">
     <Grid Background="#FF2D2D30">
         <Grid HorizontalAlignment="Left" Width="12" Background="#FF3F3F46" MouseDown="Grid_MouseDown">
             <Label Content="|" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF2D2D30"/>
