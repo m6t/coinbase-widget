@@ -1,0 +1,41 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BTCPrice"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="BTCPrice.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="90" Width="439" WindowStyle="None" ResizeMode="NoResize">
+    <Grid Background="#FF2D2D30">
+        <Grid HorizontalAlignment="Left" Width="12" Background="#FF3F3F46" MouseDown="Grid_MouseDown">
+            <Label Content="|" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF2D2D30"/>
+        </Grid>
+        <Label x:Name="btc" Content="----" HorizontalAlignment="Left" Margin="60,6,0,0" VerticalAlignment="Top" Foreground="#FFE83500"/>
+        <Label Content="1 BTC =" HorizontalAlignment="Left" Margin="17,6,0,0" VerticalAlignment="Top" Foreground="#FF6E6E6E"/>
+        <Label x:Name="eth" Content="----" HorizontalAlignment="Left" Margin="201,6,0,0" VerticalAlignment="Top" Foreground="#FF198D00"/>
+        <Label Content="1 ETH =" HorizontalAlignment="Left" Margin="158,6,0,0" VerticalAlignment="Top" Foreground="#FF6E6E6E"/>
+        <Label x:Name="ltc" Content="----" HorizontalAlignment="Left" Margin="355,6,0,0" VerticalAlignment="Top" Foreground="#FF198D00"/>
+        <Label Content="1 LTC =" HorizontalAlignment="Left" Margin="311,6,0,0" VerticalAlignment="Top" Foreground="#FF6E6E6E"/>
+        <Grid HorizontalAlignment="Right" Width="18" Background="#FF3F3F46" MouseDown="Grid_MouseDown_1" RenderTransformOrigin="0.5,0.5">
+
+            <Label Content="V" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Segoe UI Black" Foreground="#FF342F30" RenderTransformOrigin="0.5,0.5">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform x:Name="arrowangle" Angle="0"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+        </Grid>
+        <ComboBox HorizontalAlignment="Left" Margin="17,63,0,0" VerticalAlignment="Top" Width="104" SelectedIndex="0" SelectionChanged="ComboBox_SelectionChanged">
+            <System:String>USD</System:String>
+            <System:String>TRY</System:String>
+        </ComboBox>
+        <Label Content="Kaynak : Coinbase" HorizontalAlignment="Right" Margin="0,59,23,0" VerticalAlignment="Top" Foreground="#FF3F3F46"/>
+        <Label Content="Para Birimi" HorizontalAlignment="Left" Margin="17,37,0,0" VerticalAlignment="Top" Foreground="#FF6E6E6E"/>
+
+    </Grid>
+</Window>
